@@ -11,30 +11,43 @@ This README provides detailed instructions and information about various aspects
 
 In Question 1, all runs and errors/failures are documented within the terminal. Additionally, core dumped files are provided, along with a screenshot of the opened DDD (Data Display Debugger) and GDB (GNU Debugger) inside the terminal.
 
+
 ## Q2
 
 A screenshot illustrating a successful run is attached. To execute, simply run the command:
 
-make all ./poisson x y
 
+```bash
+make all
+./poisson x y
+```
 
 ## Q3
 
 A screenshot demonstrating a successful run is provided. To execute, follow these steps:
 
-make all ./program
+```bash
+make all
+./program
+```
 
 The hardcoded values from the assignment will be utilized as specified in Q2.
+
 
 ## Q4
 
 An attached **gcov** file is available, and its contents can also be viewed within the terminal at the conclusion of execution. To initiate:
 
-make all ./dijkstra (enter any amount of numbers with spaces between each number)
-
+make all 
+```bash
+make all
+./dijkstra (enter any amount of numbers with spaces between each number)
+```
 If numbers are entered, the program will proceed and prompt "Enter values for row x (expected y values):" for each row. To generate the gcov:
 
+```bash
 gcov dijkstra.cpp
+```
 
 
 ## Q5
