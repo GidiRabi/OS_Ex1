@@ -1,31 +1,44 @@
-**Q1
-in question 1 all the runs and fails/error are inside the terminal.
-also attached core dumped files
-screenshot of opened ddd, dgb is inside the terminal
+<h3>README</h3>
 
-Q2
-A screenshot of a run is attached
-to run: 'make all' -> ./poisson x y
+<p>This README provides detailed instructions and information about various aspects of the project.</p>
 
-Q3
-A screenshot of a run is attached
-to run: 'make all' -> ./program
-and the hardcoded values from the assignment will be ran using Q2
+<h4>Q1</h4>
 
-Q4
-***gcov file is attached, also can see it inside the terminal at the end.
+<p>In Question 1, all runs and errors/failures are documented within the terminal. Additionally, core dumped files are provided, along with a screenshot of the opened DDD (Data Display Debugger) and GDB (GNU Debugger) inside the terminal.</p>
 
-to run: 'make all' -> ./dijkstra (enter any amount of numbers with space between each number)
-if you entered numbers it'll continue and say "Enter values for row x (expected y values):"
-and so on..
-Then to get the gcov -> gcov dijkstra.cpp
+<h4>Q2</h4>
 
-Q5
-there are 9 files attached, nameOfProg_Profiling_Number for 3 programs and 3 sizes 
-we can see how many times each one ran and compare
+<p>A screenshot illustrating a successful run is attached. To execute, simply run the command:</p>
+<pre><code>make all
+./poisson x y
+</code></pre>
 
-Q6
+<h4>Q3</h4>
 
+<p>A screenshot demonstrating a successful run is provided. To execute, follow these steps:</p>
+<pre><code>make all
+./program
+</code></pre>
+<p>The hardcoded values from the assignment will be utilized as specified in Q2.</p>
 
+<h4>Q4</h4>
 
-Disclaimer: We used ChatGPT for correcting and detailing our documentations and some code fixing for c++ uses.
+<p>An attached <strong>gcov</strong> file is available, and its contents can also be viewed within the terminal at the conclusion of execution. To initiate:</p>
+<pre><code>make all
+./dijkstra (enter any amount of numbers with spaces between each number)
+</code></pre>
+<p>If numbers are entered, the program will proceed and prompt "Enter values for row x (expected y values):" for each row. To generate the gcov:</p>
+<pre><code>gcov dijkstra.cpp
+</code></pre>
+
+<h4>Q5</h4>
+
+<p>Nine files are attached, following the naming convention: <em>NameOfProg_Profiling_Number</em>, covering three programs and three sizes. This allows for the comparison of runtime occurrences for each.</p>
+
+<h4>Q6</h4>
+
+<p><em>This section intentionally left blank.</em></p>
+
+<h3>Disclaimer</h3>
+
+<p>ChatGPT was utilized for correcting and enhancing documentations and provided assistance in fixing C++ code where necessary.</p>
