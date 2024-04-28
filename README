@@ -12,8 +12,6 @@ A screenshot illustrating a successful run is attached. To execute, simply run t
 make all
 ./poisson x y
 
-css
-Copy code
 
 #### Q3
 
@@ -21,8 +19,6 @@ A screenshot demonstrating a successful run is provided. To execute, follow thes
 make all
 ./program
 
-csharp
-Copy code
 The hardcoded values from the assignment will be utilized as specified in Q2.
 
 #### Q4
@@ -31,13 +27,10 @@ An attached **gcov** file is available, and its contents can also be viewed with
 make all
 ./dijkstra (enter any amount of numbers with spaces between each number)
 
-sql
-Copy code
+
 If numbers are entered, the program will proceed and prompt "Enter values for row x (expected y values):" for each row. To generate the gcov:
 gcov dijkstra.cpp
 
-shell
-Copy code
 
 #### Q5
 
