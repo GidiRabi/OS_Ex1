@@ -1,0 +1,12 @@
+gidi@gidi:~/Desktop/Ass1_OS/Q3$ make all
+g++ -Wall -std=c++11 -fPIC -shared -o ../Q2/libpoisson.so ../Q2/poisson.cpp -lm
+g++ -Wall -std=c++11 -fPIC -o program program.cpp -I../Q2 -L../Q2 -lpoisson -lm -Wl,-rpath,../Q2
+gidi@gidi:~/Desktop/Ass1_OS/Q3$ ./program
+Poisson probability for lambda = 2, k = 1: 0.270671
+Poisson probability for lambda = 2.000000, k = 10: 0.000038
+Poisson probability for lambda = 2.000000, k = 2: 0.270671
+Poisson probability for lambda = 3.000000, k = 3: 0.224042
+Poisson probability for lambda = 100.000000, k = 3: 0.000000
+gidi@gidi:~/Desktop/Ass1_OS/Q3$ make clean
+rm -f program ../Q2/libpoisson.so
+

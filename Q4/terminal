@@ -1,0 +1,154 @@
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ echo "ef" > terminal
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ make
+make: Nothing to be done for 'all'.
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ make all
+make: Nothing to be done for 'all'.
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ make clean
+rm -f dijkstra
+rm -f *.gcno *.gcda
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ make all
+g++ -std=c++11 -Wall -fprofile-arcs -ftest-coverage dijkstra.cpp -o dijkstra
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ ./ dijkstra
+bash: ./: Is a directory
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ ./dijkstra 0 0 1
+Enter values for row 2 (expected 3 values):
+0 0 1
+Enter values for row 3 (expected 3 values):
+1 1 0
+Vertex 	 Distance from Source
+0 		0
+1 		2
+2 		1
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ gcov dijkstra.cpp
+File 'dijkstra.cpp'
+Lines executed:100.00% of 42
+Creating 'dijkstra.cpp.gcov'
+
+File '/usr/include/c++/11/iostream'
+No executable lines
+Removing 'iostream.gcov'
+
+Lines executed:100.00% of 42
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ cat dijkstra.cpp.gcov
+        -:    0:Source:dijkstra.cpp
+        -:    0:Graph:dijkstra.gcno
+        -:    0:Data:dijkstra.gcda
+        -:    0:Runs:1
+        -:    1:// C++ program for Dijkstra's single source shortest path
+        -:    2:// algorithm. The program is for adjacency matrix
+        -:    3:// representation of the graph
+        -:    4:#include <iostream>
+        -:    5:using namespace std;
+        -:    6:#include <limits.h>
+        -:    7:
+        -:    8:
+        -:    9:// A utility function to find the vertex with minimum
+        -:   10:// distance value, from the set of vertices not yet included
+        -:   11:// in shortest path tree
+        2:   12:int minDistance(int dist[], bool sptSet[], int V)
+        -:   13:{
+        -:   14:	
+        -:   15:	// Initialize min value
+        2:   16:	int min = INT_MAX, min_index;
+        -:   17:
+        8:   18:	for (int v = 0; v < V; v++)
+        6:   19:		if (sptSet[v] == false && dist[v] <= min)
+        3:   20:			min = dist[v], min_index = v;
+        -:   21:
+        2:   22:	return min_index;
+        -:   23:}
+        -:   24:
+        -:   25:// A utility function to print the constructed distance array
+        -:   26:
+        1:   27:void printSolution(int dist[], int V)
+        -:   28:{
+        1:   29:	cout << "Vertex \t Distance from Source" << endl;
+        4:   30:	for (int i = 0; i < V; i++)
+        3:   31:		cout << i << " \t\t" << dist[i] << endl;
+        1:   32:}
+        -:   33:
+        -:   34:// Function that implements Dijkstra's single source
+        -:   35:// shortest path algorithm for a graph represented using
+        -:   36:// adjacency matrix representation
+        1:   37:void dijkstra(int** graph, int src, int V)
+        -:   38:{
+        -:   39:
+        -:   40:	
+        1:   41:	int dist[V]; // The output array. dist[i] will hold the shortest distance from src to i
+        -:   42:
+        1:   43:	bool sptSet[V]; // sptSet[i] will be true if vertex i is included in shortest
+        -:   44:	// path tree or shortest distance from src to i is finalized
+        -:   45:
+        -:   46:	// Initialize all distances as INFINITE and stpSet[] as false
+        4:   47:	for (int i = 0; i < V; i++)
+        3:   48:		dist[i] = INT_MAX, sptSet[i] = false;
+        -:   49:
+        -:   50:	// Distance of source vertex from itself is always 0
+        1:   51:	dist[src] = 0;
+        -:   52:
+        -:   53:	// Find shortest path for all vertices
+        3:   54:	for (int count = 0; count < V - 1; count++) {
+        -:   55:		// Pick the minimum distance vertex from the set of
+        -:   56:		// vertices not yet processed. u is always equal to
+        -:   57:		// src in the first iteration.
+        2:   58:		int u = minDistance(dist, sptSet, V);
+        -:   59:
+        -:   60:		// Mark the picked vertex as processed
+        2:   61:		sptSet[u] = true;
+        -:   62:
+        -:   63:		// Update dist value of the adjacent vertices of the
+        -:   64:		// picked vertex.
+        8:   65:		for (int v = 0; v < V; v++)
+        -:   66:
+        -:   67:			// Update dist[v] only if is not in sptSet,
+        -:   68:			// there is an edge from u to v, and total
+        -:   69:			// weight of path from src to v through u is
+        -:   70:			// smaller than current value of dist[v]
+        6:   71:			if (!sptSet[v] && graph[u][v]
+        2:   72:				&& dist[u] != INT_MAX
+        2:   73:				&& dist[u] + graph[u][v] < dist[v])
+        2:   74:				dist[v] = dist[u] + graph[u][v];
+        -:   75:	}
+        -:   76:
+        -:   77:	// print the constructed distance array
+        1:   78:	printSolution(dist, V);
+        2:   79:}
+        -:   80:
+        -:   81:// driver's code
+        1:   82:int main(int argc, char* argv[]){
+        -:   83:
+        -:   84:	//receives a line of numbers - (argv)
+        -:   85:	//save in c the amount of numbers - (argc - 1)
+        -:   86:	//define a graph[c][c] and enter for the first line the line we entered
+        -:   87:	//read c-1 lines from the user and insert it to the graph accordingly
+        -:   88:	//check for error...
+        -:   89:	//send to dijkstra and
+        -:   90:	
+        1:   91:	int size = argc -1;
+       1*:   92:	int** graph = new int*[size];
+        -:   93:	
+        4:   94:	for (int i = 0; i < size; i++) {
+       3*:   95:        	graph[i] = new int[size];
+        3:   96:        	graph[0][i] = atoi(argv[i + 1]);
+        -:   97:    	}
+        -:   98:	
+        -:   99:	
+        3:  100:	for (int i = 1; i < size; i++) {
+        2:  101:        	cout << "Enter values for row " << i + 1 << " (expected " << size << " values):" << endl;
+        8:  102:        	for (int j = 0; j < size; j++) {
+        6:  103:            		cin >> graph[i][j];
+        -:  104:        	}
+        -:  105:    }
+        -:  106:
+        -:  107:	// Function call
+        1:  108:	dijkstra(graph, 0, size);
+        -:  109:
+        4:  110:	for (int i = 0; i < size; i++) {
+        3:  111:		delete[] graph[i];
+        -:  112:	}
+        1:  113:    	delete[] graph;
+        1:  114:	return 0;
+        -:  115:}
+        -:  116:
+        -:  117:
+

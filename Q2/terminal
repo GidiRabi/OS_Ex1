@@ -1,0 +1,104 @@
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ echo "^[[200~#include <iostream>
+> #include <cmath>
+> 
+> using namespace std;
+> 
+> long double poisson_probability(long double lambda, int k) {
+>     return (pow(lambda, k) * exp(-lambda)) / tgamma(k + 1);
+> }
+> 
+> int main(int argc, char *argv[]) {
+>     if (argc != 3) {
+>         cout << "Error\n";
+>         return 1;
+>     }
+> 
+>     long double lambda = strtold(argv[1], nullptr);
+>     int k = atoi(argv[2]);
+> 
+>     long double result = poisson_probability(lambda, k);
+>     cout << fixed << result << endl;
+> 
+>     return 0;
+> }
+> "
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+long double poisson_probability(long double lambda, int k) {
+    return (pow(lambda, k) * exp(-lambda)) / tgamma(k + 1);
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        cout << Errorn;
+        return 1;
+    }
+
+    long double lambda = strtold(argv[1], nullptr);
+    int k = atoi(argv[2]);
+
+    long double result = poisson_probability(lambda, k);
+    cout << fixed << result << endl;
+
+    return 0;
+}
+
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ echo "^[[200~#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+long double poisson_probability(long double lambda, int k) {
+    return (pow(lambda, k) * exp(-lambda)) / tgamma(k + 1);
+}
+
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        cout << "Error\n";
+        return 1;
+    }
+
+    long double lambda = strtold(argv[1], nullptr);
+    int k = atoi(argv[2]);
+
+    long double result = poisson_probability(lambda, k);
+    cout << fixed << result << endl;
+
+    return 0;
+}
+" > poisson.cpp
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ echo "c" > Makefile
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ man 3 expf
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ man 1 echo
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ echo Makefile
+Makefile
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ cat Makefile
+CC = g++
+CFLAGS = -Wall -std=c++11
+LIBS = -lm
+
+all: poisson
+
+poisson: poisson.cpp
+	$(CC) $(CFLAGS) -o poisson poisson.cpp $(LIBS)
+
+clean:
+	rm -f poisson
+
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ make all
+g++ -Wall -std=c++11 -o poisson poisson.cpp -lm
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ ./poisson
+Error
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ ./poisson 3 4
+0.168031
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ ./poisson 3 4 3
+Error
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ ./poisson 9 8
+0.131756
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ ./poisson 11 12
+0.109430
+gidi@gidi:~/Desktop/Ass1_OS/Q2$ 
+

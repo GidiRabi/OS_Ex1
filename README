@@ -1,0 +1,31 @@
+Q1
+in question 1 all the runs and fails/error are inside the terminal.
+also attached core dumped files
+screenshot of opened ddd, dgb is inside the terminal
+
+Q2
+A screenshot of a run is attached
+to run: 'make all' -> ./poisson x y
+
+Q3
+A screenshot of a run is attached
+to run: 'make all' -> ./program
+and the hardcoded values from the assignment will be ran using Q2
+
+Q4
+***gcov file is attached, also can see it inside the terminal at the end.
+
+to run: 'make all' -> ./dijkstra (enter any amount of numbers with space between each number)
+if you entered numbers it'll continue and say "Enter values for row x (expected y values):"
+and so on..
+Then to get the gcov -> gcov dijkstra.cpp
+
+Q5
+there are 9 files attached, nameOfProg_Profiling_Number for 3 programs and 3 sizes 
+we can see how many times each one ran and compare
+
+Q6
+
+
+
+Disclaimer: We used ChatGPT for correcting and detailing our documentations and some code fixing for c++ uses.

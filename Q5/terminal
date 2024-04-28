@@ -1,0 +1,23 @@
+gidi@gidi:~/Desktop/Ass1_OS/Q5$ make all
+g++ -std=c++11 -Wall -Wextra -Wpedantic -g -pg -o Kadane Kadane.cpp
+g++ -std=c++11 -Wall -Wextra -Wpedantic -g -pg -o Brute_Force Brute_Force.cpp
+g++ -std=c++11 -Wall -Wextra -Wpedantic -g -pg -o Divide_and_Conquer Divide_and_Conquer.cpp
+gidi@gidi:~/Desktop/Ass1_OS/Q5$ ./Kadane 123 100
+./Brute_Force 123 100
+./Divide_and_Conquer 123 100
+gidi@gidi:~/Desktop/Ass1_OS/Q5$ gprof Kadane > kadane_profiling_100.txt
+gprof Brute_Force > bruteforce_profiling_100.txt
+gprof Divide_and_Conquer > divideconquer_profiling_100.txt
+gidi@gidi:~/Desktop/Ass1_OS/Q5$ ./Kadane 123 1000
+./Brute_Force 123 1000
+./Divide_and_Conquer 123 1000
+gidi@gidi:~/Desktop/Ass1_OS/Q5$ gprof Kadane > kadane_profiling_1000.txt
+gprof Brute_Force > bruteforce_profiling_1000.txt
+gprof Divide_and_Conquer > divideconquer_profiling_1000.txt
+gidi@gidi:~/Desktop/Ass1_OS/Q5$ ./Kadane 123 10000
+./Brute_Force 123 10000
+./Divide_and_Conquer 123 10000
+gidi@gidi:~/Desktop/Ass1_OS/Q5$ gprof Kadane > kadane_profiling_10000.txt
+gprof Brute_Force > bruteforce_profiling_10000.txt
+gprof Divide_and_Conquer > divideconquer_profiling_10000.txt
+
