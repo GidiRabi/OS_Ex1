@@ -42,7 +42,7 @@ An attached **gcov** file is available, and its contents can also be viewed with
 make all
 ./dijkstra (enter any amount of numbers with spaces between each number)
 ```
-# Example:
+### Example:
 ```bash
 gidi@gidi:~/Desktop/Ass1_OS/Q4$ ./dijkstra 0 0 1
 Enter values for row 2 (expected 3 values):
