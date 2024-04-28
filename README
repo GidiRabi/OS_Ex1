@@ -1,44 +1,52 @@
-<h3>README</h3>
+### README
 
-<p>This README provides detailed instructions and information about various aspects of the project.</p>
+This README provides detailed instructions and information about various aspects of the project.
 
-<h4>Q1</h4>
+#### Q1
 
-<p>In Question 1, all runs and errors/failures are documented within the terminal. Additionally, core dumped files are provided, along with a screenshot of the opened DDD (Data Display Debugger) and GDB (GNU Debugger) inside the terminal.</p>
+In Question 1, all runs and errors/failures are documented within the terminal. Additionally, core dumped files are provided, along with a screenshot of the opened DDD (Data Display Debugger) and GDB (GNU Debugger) inside the terminal.
 
-<h4>Q2</h4>
+#### Q2
 
-<p>A screenshot illustrating a successful run is attached. To execute, simply run the command:</p>
-<pre><code>make all
+A screenshot illustrating a successful run is attached. To execute, simply run the command:
+make all
 ./poisson x y
-</code></pre>
 
-<h4>Q3</h4>
+css
+Copy code
 
-<p>A screenshot demonstrating a successful run is provided. To execute, follow these steps:</p>
-<pre><code>make all
+#### Q3
+
+A screenshot demonstrating a successful run is provided. To execute, follow these steps:
+make all
 ./program
-</code></pre>
-<p>The hardcoded values from the assignment will be utilized as specified in Q2.</p>
 
-<h4>Q4</h4>
+csharp
+Copy code
+The hardcoded values from the assignment will be utilized as specified in Q2.
 
-<p>An attached <strong>gcov</strong> file is available, and its contents can also be viewed within the terminal at the conclusion of execution. To initiate:</p>
-<pre><code>make all
+#### Q4
+
+An attached **gcov** file is available, and its contents can also be viewed within the terminal at the conclusion of execution. To initiate:
+make all
 ./dijkstra (enter any amount of numbers with spaces between each number)
-</code></pre>
-<p>If numbers are entered, the program will proceed and prompt "Enter values for row x (expected y values):" for each row. To generate the gcov:</p>
-<pre><code>gcov dijkstra.cpp
-</code></pre>
 
-<h4>Q5</h4>
+sql
+Copy code
+If numbers are entered, the program will proceed and prompt "Enter values for row x (expected y values):" for each row. To generate the gcov:
+gcov dijkstra.cpp
 
-<p>Nine files are attached, following the naming convention: <em>NameOfProg_Profiling_Number</em>, covering three programs and three sizes. This allows for the comparison of runtime occurrences for each.</p>
+shell
+Copy code
 
-<h4>Q6</h4>
+#### Q5
 
-<p><em>This section intentionally left blank.</em></p>
+Nine files are attached, following the naming convention: *NameOfProg_Profiling_Number*, covering three programs and three sizes. This allows for the comparison of runtime occurrences for each.
 
-<h3>Disclaimer</h3>
+#### Q6
 
-<p>ChatGPT was utilized for correcting and enhancing documentations and provided assistance in fixing C++ code where necessary.</p>
+*This section intentionally left blank.*
+
+### Disclaimer
+
+ChatGPT was utilized for correcting and enhancing documentations and provided assistance in fixing C++ code where necessary.
