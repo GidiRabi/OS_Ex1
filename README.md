@@ -38,7 +38,6 @@ The hardcoded values from the assignment will be utilized as specified in Q2.
 
 An attached **gcov** file is available, and its contents can also be viewed within the terminal at the conclusion of execution. To initiate:
 
-make all 
 ```bash
 make all
 ./dijkstra (enter any amount of numbers with spaces between each number)
