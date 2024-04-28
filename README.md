@@ -42,6 +42,18 @@ An attached **gcov** file is available, and its contents can also be viewed with
 make all
 ./dijkstra (enter any amount of numbers with spaces between each number)
 ```
+# Example:
+```bash
+gidi@gidi:~/Desktop/Ass1_OS/Q4$ ./dijkstra 0 0 1
+Enter values for row 2 (expected 3 values):
+0 0 1
+Enter values for row 3 (expected 3 values):
+1 1 0
+Vertex 	 Distance from Source
+0 		0
+1 		2
+2 		1
+```
 If numbers are entered, the program will proceed and prompt "Enter values for row x (expected y values):" for each row. To generate the gcov:
 
 ```bash
