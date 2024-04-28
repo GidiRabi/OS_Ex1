@@ -2,6 +2,16 @@
 
 This README provides detailed instructions and information about various aspects of the project.
 
+## Table of Contents
+
+- [Q1](#q1)
+- [Q2](#q2)
+- [Q3](#q3)
+- [Q4](#q4)
+- [Q5](#q5)
+- [Q6](#q6)
+- [Disclaimer](#disclaimer)
+- 
 ## Q1
 
 In Question 1, all runs and errors/failures are documented within the terminal. Additionally, core dumped files are provided, along with a screenshot of the opened DDD (Data Display Debugger) and GDB (GNU Debugger) inside the terminal.
