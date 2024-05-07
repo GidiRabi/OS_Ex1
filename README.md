@@ -67,7 +67,21 @@ Nine files are attached, following the naming convention: *NameOfProg_Profiling_
 
 ## Q6
 
-*This section intentionally left blank.*
+The terminal to an example output is provided
+
+```bash
+make all
+./findPhone _____
+./add2PB "Full name,Phone Number\n"
+make clean
+```
+
+### Example:
+```bash
+./findPhone Micky
+./add2PB "nezer ofer,03-1234567\n"
+```
+
 
 # Disclaimer
 
