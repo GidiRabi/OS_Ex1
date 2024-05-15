@@ -1,14 +1,29 @@
-SUBDIRS = Q1 Q2 Q3 Q4 Q5 Q6
+.PHONY: all clean Q1 Q2 Q3 Q4 Q5 Q6
 
-.PHONY: all $(SUBDIRS)
+all: Q1 Q2 Q3 Q4 Q5 Q6
 
-all: $(SUBDIRS)
+Q1:
+	make -C Q1 all
 
-$(SUBDIRS):
-	@echo "Running make for $@"
-	$(MAKE) -C $@
+Q2:
+	make -C Q2 all
+
+Q3:
+	make -C Q3 all
+
+Q4:
+	make -C Q4 all
+
+Q5:
+	make -C Q5 all
+
+Q6:
+	make -C Q6 all
 
 clean:
-	for dir in $(SUBDIRS); do \
-		$(MAKE) -C $$dir clean; \
-	done
+	make -C Q1 clean
+	make -C Q2 clean
+	make -C Q3 clean
+	make -C Q4 clean
+	make -C Q5 clean
+	make -C Q6 clean
