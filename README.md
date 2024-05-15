@@ -1,6 +1,6 @@
 # README
 
-This README provides detailed instructions and information about various aspects of the project.
+This README provides detailed instructions and information about various aspects of the project mostly explaining each question.
 
 ## Table of Contents
 
@@ -72,17 +72,18 @@ The terminal to an example output is provided
 ```bash
 make all
 ./findPhone _____
-./add2PB "Full name,Phone Number\n"
+./add2PB "Full name,Phone Number"
 make clean
 ```
 
 ### Example:
 ```bash
 ./findPhone Micky
-./add2PB "nezer ofer,03-1234567\n"
+./add2PB "nezer ofer,03-1234567"
+./findPhone ofer
 ```
 
 
 # Disclaimer
 
-ChatGPT was utilized for correcting and enhancing documentations and provided assistance in fixing C++ code where necessary.
+During the assignment ChatGPT was used for correcting and enhancing documentations and provided assistance in fixing C++ code where necessary + help from gal & chanan.
