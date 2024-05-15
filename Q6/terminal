@@ -1,0 +1,17 @@
+gidi@gidi:~/Desktop/Ass1_OS/Q6$ make all
+g++ -o add2PB add2PB.cpp
+g++ -o findPhone findPhone.cpp
+gidi@gidi:~/Desktop/Ass1_OS/Q6$ ./add2PB Final photgraphed test,052-1234567
+Error: too many arguments
+gidi@gidi:~/Desktop/Ass1_OS/Q6$ ./add2PB "Final photgraphed test,052-1234567"
+gidi@gidi:~/Desktop/Ass1_OS/Q6$ ./add2PB "Final photgraphed test 2,052-7654321"
+gidi@gidi:~/Desktop/Ass1_OS/Q6$ ./findPhone Gidi
+054-4667995
+gidi@gidi:~/Desktop/Ass1_OS/Q6$ ./findPhone Final
+052-1234567
+052-7654321
+gidi@gidi:~/Desktop/Ass1_OS/Q6$ ./findPhone test 2
+Usage: ./findPhone <name>
+gidi@gidi:~/Desktop/Ass1_OS/Q6$ ./findPhone "test 2"
+052-7654321
+
