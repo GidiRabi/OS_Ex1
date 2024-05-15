@@ -4,6 +4,9 @@ This README provides detailed instructions and information about various aspects
 In each folder you'll find a terminal.txt file that contains a run of the program.
 In questions where files were created the files are attached and viewable, screenshots are included in unsaveable files & program execution.
 
+Run  `make all` in the main folder then follow, the instructions bellow.
+
+
 ## Table of Contents
 
 - [Q1](#q1) - [Q2](#q2) - [Q3](#q3) - [Q4](#q4) - [Q5](#q5) - [Q6](#q6) - [Disclaimer](#disclaimer)
