@@ -1,6 +1,8 @@
 # README
 
 This README provides detailed instructions and information about various aspects of the project mostly explaining each question.
+In each folder you'll find a terminal.txt file that contains a run of the program.
+In questions where files were created the files are attached and viewable, screenshots are included in unsaveable files & program execution.
 
 ## Table of Contents
 
@@ -87,3 +89,8 @@ make clean
 # Disclaimer
 
 During the assignment ChatGPT was used for correcting and enhancing documentations and provided assistance in fixing C++ code where necessary + help from gal & chanan.
+
+# Authors
+* Gidi Rabi - gidirabi111@gmail.com
+* Maayan sher - maayan1sher@gmail.com
+
